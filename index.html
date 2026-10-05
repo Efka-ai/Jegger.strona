@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JEGGER – Zabudowy i przyczepy samochodowe, Gostyń</title>
+  <meta name="description" content="Zabudowy samochodowe i przyczepy z Gostynia. Autolawety, skrzynie z plandeką, serwis, części i sklep internetowy.">
+  <link rel="icon" href="assets/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#14181c',
+            paper: '#fbfaf8',
+            line: '#e7e2d8',
+            muted: '#4a4740',
+            jred: '#E2231A',
+            jyellow: '#F7DA32'
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+            body: ['"IBM Plex Sans"', 'system-ui', 'sans-serif']
+          },
+          maxWidth: { wrap: '1240px' }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-paper text-ink font-body antialiased">
+
+  <!-- NAWIGACJA -->
+  <header class="sticky top-0 z-40 bg-jyellow/95 backdrop-blur border-b border-ink">
+    <div class="mx-auto max-w-wrap px-5 sm:px-8 py-3 flex items-center justify-between">
+      <a href="#" aria-label="JEGGER – strona główna" class="flex items-center">
+        <img src="assets/logo.png" alt="JEGGER" class="h-9 w-auto rounded-[3px]">
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-[15px] font-medium text-ink/80" aria-label="Główna nawigacja">
+        <a class="hover:text-ink" href="#oferta">Oferta</a>
+        <a class="hover:text-ink" href="#o-nas">O nas</a>
+        <a class="hover:text-ink" href="#sklep">Sklep</a>
+        <a class="hover:text-ink" href="#kariera">Kariera</a>
+        <a class="hover:text-ink" href="#kontakt">Kontakt</a>
+        <a class="btn btn-primary !py-2.5 !px-5 !text-sm" href="#kontakt">Wycena →</a>
+      </nav>
+
+      <button id="menu-toggle" class="lg:hidden p-2 -mr-2" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+
+    <nav id="mobile-menu" class="hidden lg:hidden border-t border-ink/20 px-5 sm:px-8 pb-5" aria-label="Menu mobilne">
+      <div class="flex flex-col gap-1 pt-3 text-base font-medium">
+        <a class="py-2" href="#oferta">Oferta</a>
+        <a class="py-2" href="#o-nas">O nas</a>
+        <a class="py-2" href="#sklep">Sklep</a>
+        <a class="py-2" href="#kariera">Kariera</a>
+        <a class="py-2" href="#kontakt">Kontakt</a>
+        <a class="btn btn-primary mt-2 self-start" href="#kontakt">Wycena →</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="mx-auto max-w-wrap px-5 sm:px-8 pt-14 pb-14 lg:pt-24 lg:pb-20 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 flex flex-col gap-7">
+        <p class="kicker">Od 1999 roku w Gostyniu</p>
+        <h1 class="font-display font-bold text-[40px] sm:text-[52px] lg:text-[58px] leading-[1.04] tracking-tight">
+          Zabudowy.<br>Przyczepy.<br><span class="text-jred">Bez kompromisów.</span>
+        </h1>
+        <p class="text-lg leading-relaxed text-muted max-w-[30rem]">
+          Projektujemy i montujemy zabudowy samochodów dostawczych i ciężarowych oraz produkujemy przyczepy na każde zastosowanie — plus części, serwis i wypożyczalnia.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a class="btn btn-primary" href="#oferta">Zobacz ofertę →</a>
+          <a class="btn btn-outline" href="#kontakt">Kontakt</a>
+        </div>
+      </div>
+      <div class="lg:col-span-5">
+        <div class="h-[300px] sm:h-[380px] lg:h-[420px] rounded-lg border border-line bg-white flex items-center justify-center overflow-hidden">
+          <img src="assets/foto-autolaweta-2.jpg" alt="Autolaweta Jegger z rozłożonymi najazdami" class="w-full h-full object-contain">
+        </div>
+      </div>
+    </section>
+
+    <!-- KLUCZOWE OBSZARY -->
+    <section class="mx-auto max-w-wrap px-5 sm:px-8 pb-20 lg:pb-24 grid md:grid-cols-3 gap-5">
+      <article class="card p-8 flex flex-col gap-3.5">
+        <span class="font-display text-sm font-bold text-jred">01</span>
+        <h3 class="font-display text-[21px] font-semibold">Zabudowy samochodowe</h3>
+        <p class="text-[15px] leading-relaxed text-muted">Autolawety, wywrotki, kontenery, chłodnie, izotermy, skrzynie z plandeką — pod Twój pojazd dostawczy lub ciężarowy.</p>
+        <a href="#oferta" class="font-semibold text-jred mt-auto">Zobacz typy →</a>
+      </article>
+      <article class="card p-8 flex flex-col gap-3.5">
+        <span class="font-display text-sm font-bold text-jred">02</span>
+        <h3 class="font-display text-[21px] font-semibold">Przyczepy samochodowe</h3>
+        <p class="text-[15px] leading-relaxed text-muted">Ciężarowe, lekkie, lawety, podłodziowe, do minikoparek, koni, quadów i motocykli — produkcja własna.</p>
+        <a href="#sklep" class="font-semibold text-jred mt-auto">Przejdź do sklepu →</a>
+      </article>
+      <article class="card p-8 flex flex-col gap-3.5">
+        <span class="font-display text-sm font-bold text-jred">03</span>
+        <h3 class="font-display text-[21px] font-semibold">Serwis i części</h3>
+        <p class="text-[15px] leading-relaxed text-muted">Naprawy powypadkowe, plandeki, osie, hamulce, modyfikacje zabudów oraz wypożyczalnia przyczep.</p>
+        <a href="#serwis" class="font-semibold text-jred mt-auto">Umów serwis →</a>
+      </article>
+    </section>
+
+    <!-- O NAS -->
+    <section id="o-nas" class="bg-ink text-paper py-20 lg:py-24 px-5 sm:px-8 scroll-mt-16">
+      <div class="mx-auto max-w-wrap grid lg:grid-cols-12 gap-10 lg:gap-14">
+        <div class="lg:col-span-5 flex flex-col gap-5">
+          <p class="kicker">O firmie</p>
+          <h2 class="font-display text-[30px] sm:text-4xl leading-[1.15] font-semibold">Ponad 25 lat doświadczenia w transporcie i zabudowach.</h2>
+          <p class="text-base leading-relaxed text-[#c9c4b8]">
+            Działamy od 1999 roku. W 2008 rozwinęliśmy zabudowy do aut typu Peugeot Boxer, Renault Master czy Mercedes Sprinter, a rok później zostaliśmy autoryzowanym partnerem Peugeot Polska w zakresie przebudowy pojazdów na autolawety.
+          </p>
+        </div>
+        <div class="lg:col-span-7 grid grid-cols-2 gap-px bg-[#2a2f34] rounded-lg overflow-hidden self-start">
+          <div class="bg-ink p-6 sm:p-8 flex flex-col gap-2">
+            <span class="font-display text-3xl font-bold text-jyellow">1999</span>
+            <span class="text-sm text-[#c9c4b8]">Rok założenia firmy w Gostyniu</span>
+          </div>
+          <div class="bg-ink p-6 sm:p-8 flex flex-col gap-2">
+            <span class="font-display text-3xl font-bold text-jyellow">2009</span>
+            <span class="text-sm text-[#c9c4b8]">Autoryzowany partner Peugeot ds. autolawet</span>
+          </div>
+          <div class="bg-ink p-6 sm:p-8 flex flex-col gap-2">
+            <span class="font-display text-3xl font-bold text-jyellow">2×</span>
+            <span class="text-sm text-[#c9c4b8]">Lokalizacje: sklep i produkcja/serwis</span>
+          </div>
+          <div class="bg-ink p-6 sm:p-8 flex flex-col gap-2">
+            <span class="font-display text-3xl font-bold text-jyellow">9+</span>
+            <span class="text-sm text-[#c9c4b8]">Typów zabudów w standardowej ofercie</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFERTA / SLIDER -->
+    <section id="oferta" class="mx-auto max-w-wrap px-5 sm:px-8 py-20 lg:py-24 scroll-mt-16">
+      <div class="flex flex-col gap-3 mb-10">
+        <p class="kicker">Realizacje</p>
+        <h2 class="font-display text-3xl sm:text-[34px] font-semibold">Typy zabudów, które montujemy</h2>
+      </div>
+
+      <div id="slider" class="relative w-full h-[320px] sm:h-[440px] rounded-lg overflow-hidden border border-line bg-white" role="region" aria-roledescription="karuzela" aria-label="Realizacje zabudów">
+        <figure class="slide is-active" data-slide>
+          <img src="assets/foto-autolaweta-1.jpg" alt="Biała autolaweta z opuszczoną platformą">
+          <figcaption><strong>Autolaweta</strong><span>Przewóz pojazdów, pomoc drogowa</span></figcaption>
+        </figure>
+        <figure class="slide" data-slide>
+          <img src="assets/foto-man-tgl-crafter.jpg" alt="Pomoc drogowa MAN TGL przewożąca Volkswagena Craftera">
+          <figcaption><strong>Pomoc drogowa MAN TGL</strong><span>Transport pojazdów dostawczych</span></figcaption>
+        </figure>
+        <figure class="slide" data-slide>
+          <img src="assets/foto-skrzynia-plandeka.jpg" alt="Skrzynia z plandeką i kabiną sypialną Dream Master">
+          <figcaption><strong>Skrzynia z plandeką</strong><span>Zabudowa uniwersalna + kabina sypialna Dream Master</span></figcaption>
+        </figure>
+
+        <button type="button" data-prev class="slider-arrow left-3 sm:left-4" aria-label="Poprzednie zdjęcie">‹</button>
+        <button type="button" data-next class="slider-arrow right-3 sm:right-4" aria-label="Następne zdjęcie">›</button>
+        <div data-dots class="absolute bottom-4 inset-x-0 flex justify-center gap-2" role="tablist" aria-label="Wybierz zdjęcie"></div>
+      </div>
+    </section>
+
+    <!-- SKLEP -->
+    <section id="sklep" class="bg-jyellow/95 py-20 lg:py-24 px-5 sm:px-8 scroll-mt-16">
+      <div class="mx-auto max-w-wrap">
+        <div class="grid lg:grid-cols-12 gap-6 items-end mb-10">
+          <div class="lg:col-span-8 flex flex-col gap-3">
+            <p class="kicker">sklep.jegger.pl</p>
+            <h2 class="font-display text-3xl sm:text-[34px] font-semibold">Kup online: przyczepy, części i akcesoria</h2>
+            <p class="text-base text-ink/75 max-w-[40rem]">Pełny asortyment dostępny w naszym sklepie internetowym — z dostawą lub odbiorem w Gostyniu.</p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right">
+            <a class="btn btn-dark" href="https://sklep.jegger.pl" target="_blank" rel="noopener">Przejdź do sklepu →</a>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <a class="card shop-link" href="https://sklep.jegger.pl/Shop/Group/3729/ciezarowe" target="_blank" rel="noopener">Przyczepy ciężarowe</a>
+          <a class="card shop-link" href="https://sklep.jegger.pl/Shop/Group/3728/lekkie" target="_blank" rel="noopener">Przyczepy lekkie</a>
+          <a class="card shop-link" href="https://sklep.jegger.pl/Shop/Group/3734/lawety" target="_blank" rel="noopener">Lawety</a>
+          <a class="card shop-link" href="https://sklep.jegger.pl/Shop/Group/2123/do-minikoparek" target="_blank" rel="noopener">Do minikoparek</a>
+          <a class="card shop-link" href="https://sklep.jegger.pl/Shop/Group/2121/do-przewozu-koni" target="_blank" rel="noopener">Do przewozu koni</a>
+          <a class="card shop-link" href="https://sklep.jegger.pl/Shop/Group/2120/do-przewozu-quadow" target="_blank" rel="noopener">Do przewozu quadów</a>
+          <a class="card shop-link" href="https://sklep.jegger.pl/Shop/Group/2122/do-przewozu-motocykli" target="_blank" rel="noopener">Do przewozu motocykli</a>
+          <a class="card shop-link" href="https://sklep.jegger.pl/Shop/Group/3037/uzywane" target="_blank" rel="noopener">Przyczepy używane</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- KARIERA -->
+    <section id="kariera" class="bg-jyellow/95 border-t border-ink/15 py-20 lg:py-24 px-5 sm:px-8 scroll-mt-16">
+      <div class="mx-auto max-w-wrap">
+        <div class="grid lg:grid-cols-12 gap-6 items-end mb-10">
+          <div class="lg:col-span-8 flex flex-col gap-3">
+            <p class="kicker">Kariera</p>
+            <h2 class="font-display text-3xl sm:text-[34px] font-semibold">Dołącz do zespołu Jegger</h2>
+            <p class="text-base text-ink/75 max-w-[40rem]">Szukamy ludzi do produkcji, serwisu i sprzedaży. Nie widzisz pasującego ogłoszenia? Wyślij CV — odezwiemy się, gdy pojawi się odpowiednie miejsce.</p>
+          </div>
+          <div class="lg:col-span-4 lg:text-right">
+            <!-- TODO: podmień na właściwy adres e-mail do CV -->
+            <a class="btn btn-dark" href="mailto:sklep@jegger.pl?subject=CV%20-%20Kariera">Wyślij CV →</a>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="card p-7"><h3 class="font-display text-lg font-semibold">Produkcja i zabudowy</h3></div>
+          <div class="card p-7"><h3 class="font-display text-lg font-semibold">Serwis i mechanika</h3></div>
+          <div class="card p-7"><h3 class="font-display text-lg font-semibold">Sprzedaż i obsługa klienta</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="bg-jyellow/95 border-t border-ink/15 py-20 lg:py-24 px-5 sm:px-8 scroll-mt-16">
+      <div class="mx-auto max-w-wrap grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-5 flex flex-col gap-5">
+          <p class="kicker">Kontakt</p>
+          <h2 class="font-display text-3xl sm:text-[34px] font-semibold">Porozmawiajmy o Twoim projekcie</h2>
+          <address class="not-italic flex flex-col gap-1 text-[15px] text-ink/80">
+            <strong class="text-ink">JEGGER</strong>
+            <span>Sklep: ul. Poznańska 117a, 63-800 Gostyń</span>
+            <span>Siedziba / produkcja / serwis: ul. Graniczna 16a, Gostyń</span>
+            <a href="tel:+48655751414" class="hover:underline">tel. +48 65 575 14 14</a>
+            <a href="mailto:sklep@jegger.pl" class="hover:underline">e-mail: sklep@jegger.pl</a>
+          </address>
+          <div class="flex flex-col gap-1 text-sm text-ink/70">
+            <span>Sklep: pon–pt 7:00–15:00, sobota (2× w miesiącu, po kontakcie telefonicznym)</span>
+            <span>Siedziba/serwis: pon–pt 7:00–15:00</span>
+          </div>
+          <a class="btn btn-dark self-start" href="mailto:sklep@jegger.pl">Napisz do nas →</a>
+        </div>
+
+        <div class="lg:col-span-7">
+          <!-- Mapa: osadzenie Google Maps (iframe) -->
+          <iframe
+            title="Mapa dojazdu – JEGGER, ul. Poznańska 117a, Gostyń"
+            class="w-full h-[320px] lg:h-[340px] rounded-lg border border-ink/20"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=ul.+Pozna%C5%84ska+117a,+63-800+Gosty%C5%84&output=embed"></iframe>
+        </div>
+
+        <div id="serwis" class="lg:col-span-6 card p-7 flex flex-col gap-2 scroll-mt-24">
+          <p class="kicker !text-[12px]">Serwis</p>
+          <h3 class="font-display text-[19px] font-semibold">Zgłoś naprawę lub przegląd</h3>
+          <p class="text-sm leading-relaxed text-muted">Naprawy powypadkowe, plandeki, osie, hamulce i modyfikacje zabudów.</p>
+          <!-- TODO: uzupełnij dane serwisu -->
+          <p class="text-sm text-muted">tel. [NUMER SERWISU] · e-mail: [ADRES SERWIS]</p>
+        </div>
+        <div id="partnerzy" class="lg:col-span-6 card p-7 flex flex-col gap-2 scroll-mt-24">
+          <p class="kicker !text-[12px]">Partnerzy</p>
+          <h3 class="font-display text-[19px] font-semibold">Współpraca B2B i dealerska</h3>
+          <p class="text-sm leading-relaxed text-muted">Warsztaty, flotowcy i dealerzy — porozmawiajmy o warunkach współpracy.</p>
+          <!-- TODO: uzupełnij dane dla partnerów -->
+          <p class="text-sm text-muted">tel. [NUMER PARTNERZY] · e-mail: [ADRES PARTNERZY]</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- STOPKA -->
+  <footer class="bg-ink text-paper pt-16 pb-7 px-5 sm:px-8">
+    <div class="mx-auto max-w-wrap grid sm:grid-cols-2 lg:grid-cols-12 gap-8">
+      <div class="lg:col-span-4 flex flex-col gap-3">
+        <img src="assets/logo.png" alt="JEGGER" class="h-10 w-auto self-start">
+        <span class="text-[11px] tracking-[0.16em] font-semibold text-[#8a8371]">ZABUDOWY I PRZYCZEPY SAMOCHODOWE</span>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-1.5 text-[13px] text-[#c9c4b8]">
+        <span class="footer-title">JEGGER</span>
+        <span>ul. Graniczna 16a</span>
+        <span>63-800 Gostyń, Polska</span>
+        <!-- TODO: uzupełnij NIP i REGON -->
+        <span>NIP: [NIP] · REGON: [REGON]</span>
+        <span class="footer-title !text-jyellow mt-3.5">SKLEP</span>
+        <span>ul. Poznańska 117a</span>
+        <span>63-800 Gostyń</span>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-1.5 text-[13px] text-[#c9c4b8]">
+        <span class="footer-title">KONTAKT</span>
+        <a href="mailto:sklep@jegger.pl" class="hover:text-white">sklep@jegger.pl</a>
+        <a href="tel:+48655751414" class="hover:text-white">+48 65 575 14 14</a>
+        <a href="#serwis" class="hover:text-white">Serwis</a>
+        <a href="#partnerzy" class="hover:text-white">Partnerzy</a>
+      </div>
+      <div class="lg:col-span-2 flex flex-col gap-1.5 text-[13px] text-[#c9c4b8]">
+        <span class="footer-title">MENU</span>
+        <a href="#oferta" class="hover:text-white">Oferta</a>
+        <a href="#sklep" class="hover:text-white">Sklep</a>
+        <a href="#kariera" class="hover:text-white">Kariera</a>
+        <a href="#kontakt" class="hover:text-white">Kontakt</a>
+      </div>
+    </div>
+    <div class="mx-auto max-w-wrap mt-10 pt-5 border-t border-[#2a2f34] flex flex-wrap items-center justify-between gap-3 text-xs text-[#8a8371]">
+      <span>© 2026 JEGGER. Wszelkie prawa zastrzeżone.</span>
+      <span>Polityka prywatności</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

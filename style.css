@@ -1,0 +1,123 @@
+html { scroll-behavior: smooth; }
+
+.kicker {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #E2231A;
+}
+/* na żółtym tle czerwony kicker ma za mały kontrast – używamy czerni */
+#sklep .kicker, #kariera .kicker, #kontakt .kicker { color: #14181c; }
+/* na ciemnym tle */
+#o-nas .kicker { color: #F7DA32; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 15px;
+  border: 1.5px solid transparent;
+  transition: background-color .15s, color .15s, border-color .15s;
+}
+.btn-primary { background: #E2231A; color: #fff; }
+.btn-primary:hover { background: #14181c; }
+.btn-dark { background: #14181c; color: #fff; }
+.btn-dark:hover { background: #E2231A; }
+.btn-outline { border-color: #d8d3ca; color: #14181c; }
+.btn-outline:hover { border-color: #14181c; }
+
+.card {
+  background: #fff;
+  border: 1px solid #e7e2d8;
+  border-radius: 6px;
+}
+
+.shop-link {
+  display: block;
+  padding: 22px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: border-color .15s;
+}
+.shop-link:hover { border-color: #14181c; }
+
+.footer-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fbfaf8;
+  margin-bottom: 6px;
+}
+
+:focus-visible { outline: 3px solid #14181c; outline-offset: 2px; }
+footer :focus-visible { outline-color: #F7DA32; }
+
+/* ---------- SLIDER ---------- */
+.slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity .6s ease;
+}
+.slide.is-active { opacity: 1; z-index: 2; pointer-events: auto; }
+.slide img { max-width: 92%; max-height: 82%; object-fit: contain; }
+.slide figcaption {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  max-width: calc(100% - 32px);
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: rgba(20, 24, 28, .85);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.slide figcaption strong { font-size: 15px; font-weight: 700; }
+.slide figcaption span { font-size: 12px; color: #c9c4b8; }
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(20, 24, 28, .78);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color .15s;
+}
+.slider-arrow:hover { background: #E2231A; }
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #d8d3ca;
+  cursor: pointer;
+  z-index: 5;
+}
+.slider-dot[aria-selected="true"] { background: #E2231A; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .slide { transition: none; }
+}
