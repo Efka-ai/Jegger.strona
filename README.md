@@ -1,0 +1,1 @@
+# Jegger.strona
